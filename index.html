@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lanre Ojo's WDD231 course home page for BYU-Pathway Worldwide.">
+    <meta name="author" content="Lanre Ojo">
+
+    <title>Lanre Ojo | WDD231 Course Home</title>
+
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/byui-logo.svg" alt="BYU-Idaho logo">
+
+            <span>Lanre Ojo</span>
+
+            <button id="menu-button" aria-label="Open navigation menu">☰</button>
+
+            <nav id="navigation">
+                <a href="index.html" class="active">Home</a>
+                <a href="#">Chamber</a>
+                <a href="#">Final Project</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Home</h1>
+
+        <section class="about-section">
+            <h2>About Me</h2>
+            <p>
+                Welcome to my BYU-Pathway course home page. I am studying
+                software development and building my skills in web and
+                application development.
+            </p>
+        </section>
+
+        <section class="course-section">
+            <h2>Web and Computer Programming Certificate</h2>
+
+            <div id="course-filters">
+                <button id="all-courses">All Courses</button>
+                <button id="wdd-courses">WDD Courses</button>
+                <button id="cse-courses">CSE Courses</button>
+            </div>
+
+            <div id="course-container"></div>
+
+            <p class="credits">
+                Total Credits:
+                <strong><span id="total-credits">0</span></strong>
+            </p>
+        </section>
+
+        <section class="current-section">
+            <h2>My Progress</h2>
+            <p>
+                I have completed four courses in the Web and Computer
+                Programming certificate and am currently taking WDD 231 and
+                CSE 210.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/lanre4444" target="_blank" rel="noopener noreferrer">
+                GitHub
+            </a>
+
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                LinkedIn
+            </a>
+
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                Portfolio
+            </a>
+        </div>
+
+        <p>
+            &copy; <span id="current-year"></span> Lanre Ojo | Nigeria
+        </p>
+
+        <p>
+            Last Modified:
+            <span id="last-modified"></span>
+        </p>
+    </footer>
+</body>
+
+</html>

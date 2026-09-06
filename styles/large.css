@@ -1,0 +1,69 @@
+@media screen and (min-width: 700px) {
+
+    /* ==============================
+       Header and Navigation
+       ============================== */
+
+    .header-content {
+        grid-template-columns: auto auto 1fr;
+        padding: 1.2rem 2rem;
+    }
+
+    header img {
+        width: 110px;
+    }
+
+    header span {
+        font-size: 1.5rem;
+    }
+
+    #menu-button {
+        display: none;
+    }
+
+    nav,
+    nav.open {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 0.5rem;
+        grid-column: auto;
+    }
+
+    nav a {
+        padding: 0.7rem 1rem;
+    }
+
+
+    /* ==============================
+       Main Content
+       ============================== */
+
+    main {
+        padding: 3rem 0 4rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+
+    /* ==============================
+       Course Cards
+       ============================== */
+
+    #course-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .course-card {
+        min-height: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
