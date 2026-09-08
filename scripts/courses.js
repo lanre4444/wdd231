@@ -72,11 +72,19 @@ document.querySelector("#all-courses").addEventListener("click", () => {
 });
 
 document.querySelector("#wdd-courses").addEventListener("click", () => {
-    displayCourses(courses.filter((course) => course.code.startsWith("WDD")));
+    const wddCourses = courses.filter((course) =>
+        course.code.startsWith("WDD")
+    );
+
+    displayCourses(wddCourses);
 });
 
 document.querySelector("#cse-courses").addEventListener("click", () => {
-    displayCourses(courses.filter((course) => course.code.startsWith("CSE")));
+    const cseCourses = courses.filter((course) =>
+        course.code.startsWith("CSE")
+    );
+
+    displayCourses(cseCourses);
 });
 
 displayCourses(courses);

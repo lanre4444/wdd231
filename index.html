@@ -9,6 +9,10 @@
 
     <title>Lanre Ojo | WDD231 Course Home</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
 
@@ -24,10 +28,15 @@
 
             <span>Lanre Ojo</span>
 
-            <button id="menu-button" aria-label="Open navigation menu">☰</button>
+            <button id="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false">
+                ☰
+            </button>
 
             <nav id="navigation">
                 <a href="index.html" class="active">Home</a>
+                <a href="#about-me">About Me</a>
+                <a href="#courses">Courses</a>
+                <a href="#progress">My Progress</a>
                 <a href="#">Chamber</a>
                 <a href="#">Final Project</a>
             </nav>
@@ -37,16 +46,15 @@
     <main>
         <h1>Home</h1>
 
-        <section class="about-section">
+        <section id="about-me" class="about-section">
             <h2>About Me</h2>
             <p>
-                Welcome to my BYU-Pathway course home page. I am studying
-                software development and building my skills in web and
-                application development.
+                Welcome to my BYU-Pathway course home page. I am studying software
+                development and building my skills in web and application development.
             </p>
         </section>
 
-        <section class="course-section">
+        <section id="courses" class="course-section">
             <h2>Web and Computer Programming Certificate</h2>
 
             <div id="course-filters">
@@ -63,12 +71,11 @@
             </p>
         </section>
 
-        <section class="current-section">
+        <section id="progress" class="current-section">
             <h2>My Progress</h2>
             <p>
-                I have completed four courses in the Web and Computer
-                Programming certificate and am currently taking WDD 231 and
-                CSE 210.
+                I have completed four courses in the Web and Computer Programming
+                certificate and am currently taking WDD 231 and CSE 210.
             </p>
         </section>
     </main>
