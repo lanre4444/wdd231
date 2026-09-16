@@ -1,0 +1,571 @@
+/* ============================================
+   Benin City Chamber of Commerce
+   Base / mobile-first styles (320px and up)
+   ============================================ */
+
+:root {
+  /* Core palette */
+  --ink: #1B1410;
+  --ivory: #F7F1E4;
+  --surface: #FFFFFF;
+  --bronze: #8A4A2B;
+  --bronze-dark: #6B3A21;
+  --coral: #A6231D;
+  --patina: #3F4A3D;
+  --muted: #6B5F53;
+  --border: #E4D9C6;
+
+  /* Membership tiers */
+  --tier-gold: #B8860B;
+  --tier-silver: #6E7275;
+  --tier-member: #8A4A2B;
+
+  /* Type */
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --radius: 6px;
+  --shadow: 0 2px 8px rgba(27, 20, 16, 0.08);
+}
+
+[data-theme='dark'] {
+  --ink: #F3EADA;
+  --ivory: #16110D;
+  --surface: #221A14;
+  --bronze: #C1804F;
+  --bronze-dark: #A66A3D;
+  --coral: #D4564E;
+  --patina: #6E8570;
+  --muted: #B8AA97;
+  --border: #3A2E23;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--ivory);
+  color: var(--ink);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  color: var(--ink);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--coral);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--coral);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  z-index: 100;
+  border-radius: 0 0 var(--radius) 0;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  background-color: var(--surface);
+  border-bottom: 3px solid var(--bronze);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-width: 0;
+}
+
+.brand img {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--ink);
+}
+
+.brand-sub {
+  font-size: 0.7rem;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--bronze);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bronze);
+  flex-shrink: 0;
+}
+
+.theme-toggle svg {
+  width: 18px;
+  height: 18px;
+}
+
+.nav-toggle {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2.5px;
+  background-color: var(--ink);
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-toggle[aria-expanded='true'] span:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded='true'] span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle[aria-expanded='true'] span:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+
+.primary-nav {
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  background-color: var(--surface);
+  border-top: 1px solid var(--border);
+}
+
+.primary-nav.is-open {
+  max-height: 400px;
+}
+
+.primary-nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0.5rem 1rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.primary-nav a {
+  display: block;
+  padding: 0.75rem 0.5rem;
+  font-weight: 600;
+  color: var(--ink);
+  border-bottom: 1px solid var(--border);
+}
+
+.primary-nav a[aria-current='page'] {
+  color: var(--coral);
+  border-bottom-color: var(--coral);
+}
+
+.primary-nav a.is-disabled {
+  color: var(--muted);
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+/* ---------- Main / Hero ---------- */
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem 3rem;
+}
+
+.page-title {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+.page-lede {
+  color: var(--muted);
+  max-width: 60ch;
+  margin-bottom: 1.5rem;
+}
+
+/* ---------- Directory controls ---------- */
+
+.directory-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.result-count {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.view-toggle {
+  display: inline-flex;
+  border: 2px solid var(--bronze);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.view-toggle button {
+  padding: 0.55rem 1.1rem;
+  font-weight: 600;
+  background-color: var(--surface);
+  color: var(--bronze);
+}
+
+.view-toggle button[aria-pressed='true'] {
+  background-color: var(--bronze);
+  color: var(--ivory);
+}
+
+/* ---------- Directory grid view ---------- */
+
+.directory {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.member-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 5px solid var(--tier-member);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.member-card.skeleton {
+  min-height: 260px;
+  background: linear-gradient(90deg, var(--surface) 25%, var(--border) 50%, var(--surface) 75%);
+  background-size: 200% 100%;
+  animation: skeleton-pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes skeleton-pulse {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.member-card[data-tier='3'] {
+  border-top-color: var(--tier-gold);
+}
+
+.member-card[data-tier='2'] {
+  border-top-color: var(--tier-silver);
+}
+
+.member-card[data-tier='1'] {
+  border-top-color: var(--tier-member);
+}
+
+.card-head {
+  padding: 1rem 1.1rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.card-icon-name {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.card-icon-name img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+}
+
+.member-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.member-tagline {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-top: 0.15rem;
+}
+
+.tier-badge {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  color: #fff;
+}
+
+.tier-badge[data-tier='3'] {
+  background-color: var(--tier-gold);
+}
+
+.tier-badge[data-tier='2'] {
+  background-color: var(--tier-silver);
+}
+
+.tier-badge[data-tier='1'] {
+  background-color: var(--tier-member);
+}
+
+.card-body {
+  padding: 0.9rem 1.1rem 1.1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.card-body img.card-photo {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+  background-color: var(--ivory);
+}
+
+.card-details {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  min-width: 0;
+}
+
+.card-details dt {
+  font-weight: 700;
+  display: block;
+  font-size: 0.78rem;
+  text-transform: none;
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+
+.card-details dt:first-child {
+  margin-top: 0;
+}
+
+.card-details dd {
+  display: block;
+  margin: 0;
+  word-break: break-word;
+}
+
+.card-details a {
+  color: var(--coral);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ---------- Directory list view ---------- */
+
+.directory.list-view {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.directory.list-view .member-card {
+  flex-direction: row;
+  align-items: center;
+  border-top: 1px solid var(--border);
+  border-left: 5px solid var(--tier-member);
+}
+
+.directory.list-view .member-card[data-tier='3'] {
+  border-left-color: var(--tier-gold);
+}
+
+.directory.list-view .member-card[data-tier='2'] {
+  border-left-color: var(--tier-silver);
+}
+
+.directory.list-view .member-card[data-tier='1'] {
+  border-left-color: var(--tier-member);
+}
+
+.directory.list-view .card-body img.card-photo {
+  display: none;
+}
+
+.directory.list-view .card-head {
+  border-bottom: none;
+  padding: 0.7rem 1rem;
+  flex: 0 0 auto;
+  width: 42%;
+}
+
+.directory.list-view .card-body {
+  padding: 0.7rem 1rem;
+  flex: 1;
+  align-items: center;
+}
+
+.directory.list-view .card-icon-name img {
+  width: 28px;
+  height: 28px;
+}
+
+.directory.list-view .member-name {
+  font-size: 0.92rem;
+}
+
+.directory.list-view .tier-badge {
+  margin-top: 0.3rem;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  background-color: var(--patina);
+  color: var(--ivory);
+  padding: 2.5rem 1rem 1.5rem;
+}
+
+[data-theme='dark'] .site-footer {
+  background-color: #101A12;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+}
+
+.footer-inner h2 {
+  font-size: 1.1rem;
+  color: var(--ivory);
+  margin-bottom: 0.5rem;
+}
+
+.footer-contact p {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: #E3DCCB;
+}
+
+.footer-social {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.9rem;
+}
+
+.footer-social a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: rgba(247, 241, 228, 0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.footer-social a:hover,
+.footer-social a:focus-visible {
+  background-color: var(--coral);
+}
+
+.footer-social svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--ivory);
+}
+
+.footer-meta {
+  font-size: 0.8rem;
+  color: #C9C0AD;
+  border-top: 1px solid rgba(247, 241, 228, 0.18);
+  padding-top: 1.25rem;
+  line-height: 1.8;
+}
+
+.footer-meta strong {
+  color: var(--ivory);
+}

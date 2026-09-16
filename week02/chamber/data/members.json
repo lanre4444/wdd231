@@ -1,0 +1,148 @@
+{
+  "members": [
+    {
+      "id": 1,
+      "name": "Aduwawa Business Park",
+      "tagline": "Shared office space & business services",
+      "address": "41 Aduwawa Road, Benin City",
+      "phone": "+234 802 314 5521",
+      "email": "info@aduwawabusinesspark.com",
+      "website": "https://aduwawabusinesspark.com",
+      "image": "aduwawa-business-park.svg",
+      "membership": 3,
+      "category": "Business Services"
+    },
+    {
+      "id": 2,
+      "name": "Igodomigodo Bronze Works",
+      "tagline": "Traditional Benin bronze casting & art",
+      "address": "8 Igun Street, Benin City",
+      "phone": "+234 803 217 6640",
+      "email": "info@igodomigodobronze.com",
+      "website": "https://igodomigodobronze.com",
+      "image": "igodomigodo-bronze.svg",
+      "membership": 3,
+      "category": "Arts & Crafts"
+    },
+    {
+      "id": 3,
+      "name": "Edo Delight Kitchen",
+      "tagline": "Authentic Edo cuisine & catering",
+      "address": "45 Sapele Road, Benin City",
+      "phone": "+234 805 442 1189",
+      "email": "orders@edodelightkitchen.com",
+      "website": "https://edodelightkitchen.com",
+      "image": "edo-delight-kitchen.svg",
+      "membership": 2,
+      "category": "Food & Dining"
+    },
+    {
+      "id": 4,
+      "name": "Oba Market Textiles",
+      "tagline": "Fabrics, wax prints & tailoring supplies",
+      "address": "12 New Benin Market Road, Benin City",
+      "phone": "+234 806 550 7723",
+      "email": "sales@obamarkettextiles.com",
+      "website": "https://obamarkettextiles.com",
+      "image": "oba-market-textiles.svg",
+      "membership": 1,
+      "category": "Retail"
+    },
+    {
+      "id": 5,
+      "name": "Benin Heritage Hotel",
+      "tagline": "Comfortable stays in the heart of the city",
+      "address": "67 Ring Road, Benin City",
+      "phone": "+234 807 331 9902",
+      "email": "reservations@beninheritagehotel.com",
+      "website": "https://beninheritagehotel.com",
+      "image": "benin-heritage-hotel.svg",
+      "membership": 3,
+      "category": "Hospitality"
+    },
+    {
+      "id": 6,
+      "name": "Uzama Logistics Ltd",
+      "tagline": "Freight, haulage & last-mile delivery",
+      "address": "22 Airport Road, Benin City",
+      "phone": "+234 809 118 4456",
+      "email": "contact@uzamalogistics.com",
+      "website": "https://uzamalogistics.com",
+      "image": "uzama-logistics.svg",
+      "membership": 2,
+      "category": "Logistics"
+    },
+    {
+      "id": 7,
+      "name": "GreenLeaf Pharmacy",
+      "tagline": "Trusted community pharmacy & wellness",
+      "address": "5 Mission Road, Benin City",
+      "phone": "+234 810 276 3390",
+      "email": "care@greenleafpharmacy.com",
+      "website": "https://greenleafpharmacy.com",
+      "image": "greenleaf-pharmacy.svg",
+      "membership": 1,
+      "category": "Health & Wellness"
+    },
+    {
+      "id": 8,
+      "name": "Iyekogba Tech Hub",
+      "tagline": "Coworking & software development studio",
+      "address": "30 Iyekogba Layout, Benin City",
+      "phone": "+234 811 490 2287",
+      "email": "hello@iyekogbatechhub.com",
+      "website": "https://iyekogbatechhub.com",
+      "image": "iyekogba-tech-hub.svg",
+      "membership": 2,
+      "category": "Technology"
+    },
+    {
+      "id": 9,
+      "name": "Ekiosa Fashion House",
+      "tagline": "Contemporary Edo-inspired fashion",
+      "address": "9 Akpakpava Road, Benin City",
+      "phone": "+234 812 665 8814",
+      "email": "info@ekiosafashion.com",
+      "website": "https://ekiosafashion.com",
+      "image": "ekiosa-fashion.svg",
+      "membership": 1,
+      "category": "Retail"
+    },
+    {
+      "id": 10,
+      "name": "Benin City Microfinance Bank",
+      "tagline": "Loans & savings for small businesses",
+      "address": "88 Forestry Road, Benin City",
+      "phone": "+234 813 774 6621",
+      "email": "support@bcmicrofinance.com",
+      "website": "https://bcmicrofinance.com",
+      "image": "bc-microfinance-bank.svg",
+      "membership": 3,
+      "category": "Finance"
+    },
+    {
+      "id": 11,
+      "name": "Ovbiedo Auto Repairs",
+      "tagline": "Full-service auto repair & diagnostics",
+      "address": "17 Upper Sokponba Road, Benin City",
+      "phone": "+234 814 883 3345",
+      "email": "service@ovbiedoauto.com",
+      "website": "https://ovbiedoauto.com",
+      "image": "ovbiedo-auto.svg",
+      "membership": 1,
+      "category": "Automotive"
+    },
+    {
+      "id": 12,
+      "name": "Owan Fresh Produce Market",
+      "tagline": "Farm-fresh fruits & vegetables daily",
+      "address": "3 Textile Mill Road, Benin City",
+      "phone": "+234 815 992 7758",
+      "email": "info@owanfreshproduce.com",
+      "website": "https://owanfreshproduce.com",
+      "image": "owan-fresh-produce.svg",
+      "membership": 2,
+      "category": "Grocery"
+    }
+  ]
+}

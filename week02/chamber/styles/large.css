@@ -1,0 +1,86 @@
+/* ============================================
+   Benin City Chamber of Commerce
+   Larger viewport enhancements (768px and up)
+   ============================================ */
+
+@media screen and (min-width: 768px) {
+
+  .header-inner {
+    padding: 0.9rem 1.5rem;
+  }
+
+  .brand img {
+    width: 46px;
+    height: 46px;
+  }
+
+  .brand-name {
+    font-size: 1.15rem;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .primary-nav {
+    width: auto;
+    max-height: none;
+    overflow: visible;
+    background-color: transparent;
+    border-top: none;
+  }
+
+  .primary-nav ul {
+    flex-direction: row;
+    padding: 0;
+    gap: 1.75rem;
+  }
+
+  .primary-nav a {
+    padding: 0.4rem 0.1rem;
+    border-bottom: 2px solid transparent;
+  }
+
+  .primary-nav a[aria-current='page'] {
+    border-bottom-color: var(--coral);
+  }
+
+  main {
+    padding: 2rem 1.5rem 4rem;
+  }
+
+  .page-title {
+    font-size: 2.6rem;
+  }
+
+  .directory {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .directory.list-view {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1.1fr 0.9fr 1fr;
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  .directory {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .page-title {
+    font-size: 3rem;
+  }
+
+  .card-body img.card-photo {
+    width: 76px;
+    height: 76px;
+  }
+}
