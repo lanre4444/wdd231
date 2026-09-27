@@ -18,17 +18,20 @@
   <meta property="og:description"
     content="Browse member businesses of the Benin City Chamber of Commerce, from bronze artisans to logistics firms, hotels, and local shops." />
   <meta property="og:image" content="https://lanre4444.github.io/wdd231/chamber/images/og-banner.png" />
-  <meta property="og:url" content="https://username.github.io/wdd231/chamber/directory.html" />
+  <meta property="og:url" content="https://lanre4444.github.io/wdd231/chamber/directory.html" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
 
   <!-- Styles: normalize first, then small, then large -->
   <link rel="stylesheet" href="styles/normalize.css" />
   <link rel="stylesheet" href="styles/small.css" />
   <link rel="stylesheet" href="styles/large.css" />
+  <script src="scripts/common.js" defer></script>
   <script src="scripts/directory.js" defer></script>
 </head>
 
@@ -79,7 +82,7 @@
       tech studios. Every member listed here supports our local community.</p>
 
     <div class="directory-controls">
-      <p id="result-count" class="result-count" aria-live="polite">Loading members…</p>
+      <p id="result-count" class="result-count" aria-live="polite">Loading members&hellip;</p>
       <div class="view-toggle" role="group" aria-label="Directory view">
         <button id="grid-view-btn" type="button" aria-pressed="true">Grid</button>
         <button id="list-view-btn" type="button" aria-pressed="false">List</button>
