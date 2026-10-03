@@ -1,160 +1,117 @@
-/* Join + Thank You page styles. Adjust the variables to match your chamber palette. */
-:root {
-    --primary: #1f3a5f;
-    --accent: #b8860b;
-    --surface: #ffffff;
-    --page: #f4f6f8;
-    --text: #1a1a1a;
-    --radius: .5rem;
-}
+/* ============================================
+   Benin City Chamber of Commerce
+   Join page — styles specific to join.html and
+   thankyou.html only. Everything else (header,
+   nav, footer, theme, reset) comes from
+   normalize.css, small.css, and large.css.
+   ============================================ */
 
-* {
-    box-sizing: border-box;
-}
+/* ---------- Layout: form + membership cards ---------- */
 
-body {
-    margin: 0;
-    font-family: system-ui, sans-serif;
-    line-height: 1.5;
-    color: var(--text);
-    background: var(--page);
-}
-
-header,
-footer {
-    background: var(--primary);
-    color: #fff;
-    padding: 1rem;
-}
-
-header h1 {
-    margin: 0 0 .5rem;
-    font-size: 1.5rem;
-}
-
-nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav a {
-    color: #fff;
-}
-
-nav a[aria-current="page"] {
-    font-weight: 700;
-    text-decoration: underline;
-}
-
-footer {
-    text-align: center;
-}
-
-main {
-    max-width: 68rem;
-    margin: 0 auto;
-    padding: 1rem;
-}
-
-/* Layout: cards below the form on small screens, to the right on large */
 .join-layout {
     display: grid;
     gap: 1.5rem;
+    margin-top: 1.5rem;
 }
 
-@media (min-width: 800px) {
+@media screen and (min-width: 768px) {
     .join-layout {
         grid-template-columns: 1.4fr 1fr;
         align-items: start;
     }
 }
 
-/* Form */
+/* ---------- Form ---------- */
+
 form {
     display: grid;
     gap: 1rem;
-    background: var(--surface);
-    padding: 1.25rem;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
     border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1.25rem;
 }
 
-label {
+form label {
     display: grid;
-    gap: .25rem;
+    gap: 0.3rem;
     font-weight: 600;
 }
 
-input,
-select,
-textarea {
-    font: inherit;
-    padding: .6rem;
-    border: 1px solid #767676;
-    border-radius: .25rem;
+form input,
+form select,
+form textarea {
+    padding: 0.6rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background-color: var(--surface);
+    color: var(--ink);
 }
 
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible,
-button:focus-visible,
-a:focus-visible {
-    outline: 3px solid var(--accent);
-    outline-offset: 2px;
-}
-
-button[type="submit"] {
-    font: inherit;
+form button[type="submit"] {
+    justify-self: start;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--bronze);
+    color: var(--ivory);
+    border-radius: var(--radius);
     font-weight: 700;
-    padding: .75rem 1rem;
-    background: var(--primary);
-    color: #fff;
-    border: 0;
-    border-radius: .25rem;
-    cursor: pointer;
 }
 
-/* Membership cards with a one-time load animation (not hover) */
+form button[type="submit"]:hover {
+    background-color: var(--bronze-dark);
+}
+
+/* ---------- Membership cards ---------- */
+
 .levels {
     display: grid;
     gap: 1rem;
 }
 
 .level-card {
-    background: var(--surface);
-    border-left: 6px solid var(--accent);
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 6px solid var(--tier-member);
     border-radius: var(--radius);
+    box-shadow: var(--shadow);
     padding: 1rem;
+
+    /* One-time entrance animation on page load (not hover-triggered).
+     prefers-reduced-motion is already handled globally in normalize.css. */
     opacity: 0;
-    animation: cardIn .8s ease-out forwards;
+    animation: cardIn 0.8s ease-out forwards;
 }
 
 .level-card:nth-child(1) {
-    animation-delay: .1s;
+    animation-delay: 0.1s;
 }
 
 .level-card:nth-child(2) {
-    animation-delay: .4s;
+    animation-delay: 0.4s;
+    border-left-color: var(--tier-member);
 }
 
 .level-card:nth-child(3) {
-    animation-delay: .7s;
+    animation-delay: 0.7s;
+    border-left-color: var(--tier-silver);
 }
 
 .level-card:nth-child(4) {
     animation-delay: 1s;
+    border-left-color: var(--tier-gold);
 }
 
 .level-card h3 {
-    margin: 0 0 .5rem;
+    margin: 0 0 0.5rem;
+    font-size: 1.05rem;
 }
 
 .level-card a {
-    color: var(--primary);
+    color: var(--coral);
     font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 @keyframes cardIn {
@@ -169,26 +126,26 @@ button[type="submit"] {
     }
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .level-card {
-        animation: none;
-        opacity: 1;
-    }
-}
+/* ---------- Modals ---------- */
 
-/* Modals */
 dialog {
     width: 90%;
     max-width: 32rem;
     padding: 1.25rem;
-    border: 1px solid rgb(0 0 0 / 10%);
+    border: 1px solid var(--border);
     border-radius: var(--radius);
-    box-shadow: 0 0 3rem #777;
+    box-shadow: var(--shadow);
+    background-color: var(--surface);
+    color: var(--ink);
 }
 
 dialog h3 {
     margin-top: 0;
     padding-right: 3rem;
+}
+
+dialog ul {
+    padding-left: 1.2rem;
 }
 
 ::backdrop {
@@ -199,28 +156,29 @@ dialog h3 {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    padding: .4rem .7rem;
-    background: #fff;
-    border: 1px solid rgb(0 0 0 / 30%);
-    border-radius: .25rem;
-    cursor: pointer;
-}
-
-/* Thank you page */
-.thanks {
-    background: var(--surface);
-    margin-top: 1rem;
+    padding: 0.4rem 0.7rem;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
     border-radius: var(--radius);
 }
+
+/* ---------- Thank-you page results ---------- */
 
 .results {
     display: grid;
     grid-template-columns: max-content 1fr;
-    gap: .5rem 1.5rem;
+    gap: 0.5rem 1.5rem;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1.25rem;
+    margin-top: 1rem;
 }
 
 .results dt {
     font-weight: 700;
+    color: var(--muted);
 }
 
 .results dd {

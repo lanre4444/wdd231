@@ -1,9 +1,7 @@
-// Timestamp: when the form was loaded
+// Timestamp: when the form was loaded.
+// (Footer year/last-modified are already handled by common.js's
+// setFooterInfo() — no need to duplicate that here.)
 document.querySelector('#timestamp').value = new Date().toISOString();
-
-// Footer year
-const year = document.querySelector('#year');
-if (year) year.textContent = new Date().getFullYear();
 
 // Open a modal when its card link is clicked
 document.querySelectorAll('.level-card a[data-modal]').forEach((link) => {

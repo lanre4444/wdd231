@@ -25,5 +25,4 @@ fields.forEach(([label, key]) => {
     results.append(dt, dd);
 });
 
-const year = document.querySelector('#year');
-if (year) year.textContent = new Date().getFullYear();
+// Footer year/last-modified are already handled by common.js's setFooterInfo().
