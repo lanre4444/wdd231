@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Join the Chamber | Membership Application</title>
+    <meta name="description"
+        content="Apply for chamber of commerce membership. Compare Non-Profit, Bronze, Silver, and Gold levels.">
+    <!-- Keep your existing template stylesheet(s) here, then add join.css -->
+    <link rel="stylesheet" href="styles/join.css">
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+    <!-- Replace header, nav, and footer with your chamber template versions -->
+    <header>
+        <h1>Chamber of Commerce</h1>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html" aria-current="page">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Join the Chamber</h2>
+        <div class="join-layout">
+            <form action="thankyou.html" method="get">
+                <label>First name
+                    <input type="text" name="first" title="Enter your first name" autocomplete="given-name" required>
+                </label>
+
+                <label>Last name
+                    <input type="text" name="last" title="Enter your last name" autocomplete="family-name" required>
+                </label>
+
+                <label>Organizational title
+                    <input type="text" name="orgtitle" title="At least 7 letters, hyphens, or spaces"
+                        autocomplete="organization-title" pattern="[A-Za-z\- ]{7,}">
+                </label>
+
+                <label>Email address
+                    <input type="email" name="email" title="Enter a valid email address" autocomplete="email"
+                        placeholder="name@example.com" required>
+                </label>
+
+                <label>Mobile phone
+                    <input type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel" required>
+                </label>
+
+                <label>Business or organization name
+                    <input type="text" name="business" title="Enter your business or organization name"
+                        autocomplete="organization" required>
+                </label>
+
+                <label>Membership level
+                    <select name="level" title="Choose a membership level">
+                        <option value="np">NP Membership (non-profit, no fee)</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+
+                <label>Business or organization description
+                    <textarea name="description" rows="4"
+                        title="Briefly describe your business or organization"></textarea>
+                </label>
+
+                <input type="hidden" name="timestamp" id="timestamp">
+
+                <button type="submit">Submit application</button>
+            </form>
+
+            <section class="levels" aria-label="Membership levels">
+                <article class="level-card">
+                    <h3>NP Membership</h3>
+                    <a href="#np-modal" data-modal="np-modal">View benefits</a>
+                </article>
+                <article class="level-card">
+                    <h3>Bronze Membership</h3>
+                    <a href="#bronze-modal" data-modal="bronze-modal">View benefits</a>
+                </article>
+                <article class="level-card">
+                    <h3>Silver Membership</h3>
+                    <a href="#silver-modal" data-modal="silver-modal">View benefits</a>
+                </article>
+                <article class="level-card">
+                    <h3>Gold Membership</h3>
+                    <a href="#gold-modal" data-modal="gold-modal">View benefits</a>
+                </article>
+            </section>
+        </div>
+
+        <dialog id="np-modal" aria-labelledby="np-title">
+            <button class="close-modal" aria-label="Close">❌</button>
+            <h3 id="np-title">NP Membership</h3>
+            <p><strong>Cost:</strong> Free for non-profit organizations.</p>
+            <ul>
+                <li>Listing in the member directory</li>
+                <li>Invitations to community networking events</li>
+                <li>Monthly chamber newsletter</li>
+            </ul>
+        </dialog>
+
+        <dialog id="bronze-modal" aria-labelledby="bronze-title">
+            <button class="close-modal" aria-label="Close">❌</button>
+            <h3 id="bronze-title">Bronze Membership</h3>
+            <p><strong>Cost:</strong> $100 per year.</p>
+            <ul>
+                <li>Everything in NP Membership</li>
+                <li>Discounted tickets to chamber events</li>
+                <li>Access to quarterly training workshops</li>
+            </ul>
+        </dialog>
+
+        <dialog id="silver-modal" aria-labelledby="silver-title">
+            <button class="close-modal" aria-label="Close">❌</button>
+            <h3 id="silver-title">Silver Membership</h3>
+            <p><strong>Cost:</strong> $250 per year.</p>
+            <ul>
+                <li>Everything in Bronze Membership</li>
+                <li>Advertising space on the chamber website</li>
+                <li>Priority booking for event sponsorships</li>
+            </ul>
+        </dialog>
+
+        <dialog id="gold-modal" aria-labelledby="gold-title">
+            <button class="close-modal" aria-label="Close">❌</button>
+            <h3 id="gold-title">Gold Membership</h3>
+            <p><strong>Cost:</strong> $500 per year.</p>
+            <ul>
+                <li>Everything in Silver Membership</li>
+                <li>Spotlight position on the home page</li>
+                <li>Free admission to all chamber events</li>
+                <li>Featured business profile in the newsletter</li>
+            </ul>
+        </dialog>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Chamber of Commerce</p>
+    </footer>
+</body>
+
+</html>
