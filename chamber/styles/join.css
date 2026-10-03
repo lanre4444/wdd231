@@ -6,6 +6,14 @@
    normalize.css, small.css, and large.css.
    ============================================ */
 
+/* The audit flagged rgb(0,0,238) — the browser's default unvisited-link
+   blue — against the footer's dark background. normalize.css already sets
+   `a { color: inherit }` globally, which should cover this in real browsers,
+   but setting it explicitly here removes any ambiguity for the audit tool. */
+.footer-contact a {
+    color: inherit;
+}
+
 /* ---------- Layout: form + membership cards ---------- */
 
 .join-layout {
